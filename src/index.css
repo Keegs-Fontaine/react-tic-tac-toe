@@ -1,0 +1,37 @@
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.letter-box {
+  width: 6rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  border: 2px solid black;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.svg-icon {
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  animation: sign 1.25s ease-in-out forwards;
+}
+
+@keyframes sign {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
